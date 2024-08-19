@@ -110,6 +110,26 @@ if (dolphinsAvg > koalasAvg && dolphinsAvg >= 100) {
 } else {
     console.log("No team wins the trophy!");
 }
+// Coding Challenge #4
+console.log("Coding Challenge #4");
+// Test data
+const bill1 = 275;
+const bill2 = 40;
+const bill3 = 430;
+
+// Function to calculate tip and print the result
+function calculateTip(bill) {
+    // Calculate tip using ternary operator
+    const tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+
+    // Print the result using template literals
+    console.log(`The bill was ${bill.toFixed(2)}, the tip was ${tip.toFixed(2)}, and the total value is ${(bill + tip).toFixed(2)}`);
+}
+
+// 
+calculateTip(bill1); 
+calculateTip(bill2); 
+calculateTip(bill3); 
 
 </script>
 </html>
