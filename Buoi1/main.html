@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đinh Nguyên Chung 21127891</title>
+</head>
+<body>
+    
+</body>
+<script>
+    console.log("Coding Challenge #1");
+    // Coding Challenge #1
+    /*
+    Mark and John are trying to compare their BMI (Body Mass Index), which is
+calculated using the formula:
+BMI = mass / height ** 2 = mass / (height * height) (mass in kg
+and height in meter).
+Your tasks:
+1. Store Mark's and John's mass and height in variables
+2. Calculate both their BMIs using the formula (you can even implement both
+versions)
+3. Create a Boolean variable 'markHigherBMI' containing information about
+whether Mark has a higher BMI than John.
+    */
+   // 1
+    let massMark = 95;
+    let heightMark = 1.88;
+    let massJohn = 85;
+    let heightJohn = 1.76;
+    console.log("massMark: ",massMark,"heightMarrk: ", heightMark,"massJohn: ", massJohn, "heightJohn: ",heightJohn);
+    // 2
+    
+    let BMIMark = massMark / heightMark ** 2;
+    let BMIJohn = massJohn / heightJohn ** 2;
+    console.log("BMIMark: ",BMIMark,"BMIJohn: ",BMIJohn);
+    // 3
+    let markHigherBMI = BMIMark > BMIJohn;
+    console.log("Does Mark have a higher BMI than John? ", markHigherBMI);
+   /* // Function
+    console.log("Function");
+    var calculateBMI = function (mass, height) {
+        return mass / height ** 2;
+        
+    }
+    var compareBMI = function (massMark,massJohn,heightMark,heightJohn) {
+        const markBMI = calculateBMI(markMass, markHeight);
+        const johnBMI = calculateBMI(johnMass, johnHeight);
+
+        console.log("Mark's BMI:", markBMI);
+        console.log("John's BMI:", johnBMI);
+
+        // Boolean variable to check if Mark's BMI is higher
+        const markHigherBMI = markBMI > johnBMI;
+
+        return markHigherBMI;
+    }
+    // Example usage:
+const markMass = 78; // kg
+const markHeight = 1.75; // meters
+const johnMass = 92; // kg
+const johnHeight = 1.95; // meters
+
+const result = compareBMI(markMass, markHeight, johnMass, johnHeight);
+console.log("Does Mark have a higher BMI than John?", result);
+*/
+// Coding Challenge #2
+console.log("Coding Challenge #2");
+    //1
+    if (BMIMark > BMIJohn) {
+        console.log("Mark's BMI is higher than John's!");
+    } else {
+        console.log(`John's BMI is higher than Mark's!`);
+    }
+    //2
+    if (BMIMark > BMIJohn) {
+        console.log(`Mark's BMI (${BMIMark}) is higher than John's (${BMIJohn})!`);
+    } else {
+        console.log(`John's BMI (${BMIJohn}) is higher than Mark's (${BMIMark})!`);
+    }
+</script>
+</html>
