@@ -5,8 +5,8 @@ import { StyleSheet } from 'react-native';
 export const styles = StyleSheet.create({
     container: {
         flex: 1,
-        // justifyContent: 'space-between',
-        padding: 30,
+        justifyContent: 'space-evenly',
+        padding: 10,
     },
     view1: {
         // flex: 1,
@@ -16,26 +16,26 @@ export const styles = StyleSheet.create({
     },
     view2: {
         display: 'flex',
-
+        marginTop: 10,
         // flexDirection:'column',
     },
     view3: {
         // marginTop:
+        marginTop: 30,
     },
     view4: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'flex-end',
-        alignContent: 'flex-end',
+        marginBottom: 200,
     },
     button: {
         backgroundColor: 'yellow',
-        borderRadius: 10,
+        // borderRadius: 10,
+        width: 330,
         padding: 10,
+        marginLeft: 20,
     },
     view5: {
         textAlign: 'center',
-        marginBottom: 150,
+        marginBottom: 0,
     },
     background: {
         // flex: 1,
