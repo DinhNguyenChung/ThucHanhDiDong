@@ -1,9 +1,8 @@
 import React from 'react';
-import { View, Text, StyleSheet, SafeAreaView } from 'react-native';
+import { View, Text, StyleSheet, SafeAreaView, Image } from 'react-native';
 import { styles } from './styles';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Button } from 'react-native-elements';
-
 const login2 = () => {
     return (
         <SafeAreaView style={styles.container}>
@@ -16,27 +15,10 @@ const login2 = () => {
             >
                 <View style={styles.container}>
                     <View style={styles.view1}>
-                        <View
-                            style={{
-                                width: 140,
-                                height: 140,
-                                backgroundColor: 'black',
-                                borderRadius: '50%',
-                                display: 'flex',
-                                alignContent: 'center',
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                            }}
-                        >
-                            <View
-                                style={{
-                                    width: 120,
-                                    height: 120,
-                                    backgroundColor: '#00CCF9',
-                                    borderRadius: '50%',
-                                }}
-                            ></View>
-                        </View>
+                        <Image
+                        // source={require('F:IUHHK_I_2024Lập trình thiết bị di độngBaiTapThucHanh\buoi01_reacnativepiclogin3lock_closed.png')}
+                        // style={{ width: 50, height: 50 }}
+                        />
                     </View>
                     <View style={styles.view2}>
                         <Text

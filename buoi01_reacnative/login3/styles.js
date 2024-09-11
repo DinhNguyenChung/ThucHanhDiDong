@@ -5,7 +5,7 @@ import { StyleSheet } from 'react-native';
 export const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: 'space-between',
+        // justifyContent: 'space-between',
         padding: 30,
     },
     view1: {
@@ -32,11 +32,6 @@ export const styles = StyleSheet.create({
         backgroundColor: 'yellow',
         borderRadius: 10,
         padding: 10,
-        fontWeight: 'bold',
-    },
-    buttonText: {
-        color: 'black',
-        fontWeight: 'bold',
     },
     view5: {
         textAlign: 'center',
@@ -53,5 +48,9 @@ export const styles = StyleSheet.create({
         paddingLeft: 10,
         paddingRight: 10,
         borderRadius: 5,
+    },
+    buttonText: {
+        color: 'black',
+        fontWeight: 'bold',
     },
 });

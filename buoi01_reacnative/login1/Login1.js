@@ -1,6 +1,7 @@
 import { Text, View, Image, StyleSheet } from 'react-native';
 import React from 'react';
 import { styles } from './styles';
+import { Button } from 'react-native-elements';
 const Login = () => {
     return (
         <View style={styles.container}>
@@ -53,8 +54,8 @@ const Login = () => {
                 </Text>
             </View>
             <View style={styles.view4}>
-                <button style={styles.button}> LOGIN </button>
-                <button style={styles.button}> SIGN UP </button>
+                <Button title="LOGIN" buttonStyle={styles.button} titleStyle={styles.buttonText} />
+                <Button title="SIGN UP" buttonStyle={styles.button} titleStyle={styles.buttonText} />
             </View>
         </View>
     );

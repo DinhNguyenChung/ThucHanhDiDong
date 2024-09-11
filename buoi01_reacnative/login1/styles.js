@@ -33,4 +33,8 @@ export const styles = StyleSheet.create({
         borderRadius: 10,
         padding: 10,
     },
+    buttonText: {
+        color: 'black',
+        fontWeight: 'bold',
+    },
 });
