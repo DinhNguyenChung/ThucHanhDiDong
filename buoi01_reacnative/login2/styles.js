@@ -4,12 +4,9 @@ import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
     container: {
-        height: '100%',
-        // backgroundColor: '#00CCF9',
-        // padding: 8,
+        flex: 1,
         justifyContent: 'space-between',
         padding: 30,
-        width: '100%',
     },
     view1: {
         // flex: 1,
@@ -37,16 +34,19 @@ export const styles = StyleSheet.create({
         padding: 10,
     },
     view5: {
-        fontWeight: 'bold',
         textAlign: 'center',
-        // background: 'linear-gradient(to right, red, yellow)',
-        backgroundColor: 'rgba(255, 255, 255, 0.8)',
+        marginBottom: 150,
     },
     background: {
-        position: 'absolute',
-        left: 0,
-        right: 0,
-        top: 0,
+        // flex: 1,
+        // position: 'absolute',
+        // left: 0,
+        // right: 0,
+        // top: 0,
         // bottom: 10,
+        flex: 1,
+        paddingLeft: 10,
+        paddingRight: 10,
+        borderRadius: 5,
     },
 });
