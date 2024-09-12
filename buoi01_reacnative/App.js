@@ -4,6 +4,7 @@ import React from 'react';
 import Login2 from './login2/login2';
 import Login3 from './login3/login3';
 import Login4 from './login4/login4';
+import Login5 from './login5/login5';
 export default function App() {
-    return <Login4 />;
+    return <Login5 />;
 }
