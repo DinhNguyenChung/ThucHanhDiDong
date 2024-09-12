@@ -7,6 +7,7 @@ import Login4 from './login4/login4';
 import Login5 from './login5/login5';
 import Login6 from './login6/login6';
 import Login7 from './login7/login7';
+import Login8 from './login8/login8';
 export default function App() {
-    return <Login7 />;
+    return <Login8 />;
 }
