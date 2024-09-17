@@ -6,7 +6,8 @@ import { Card } from "react-native-paper";
 // or any files within the Snack
 import AssetExample from "./components/AssetExample";
 import Tiki from "./Tiki_ok/Tiki";
+import GeneratorPass from "./PasswordGenerate/passwordGenerator";
 
 export default function App() {
-  return <Tiki />;
+  return <GeneratorPass />;
 }
