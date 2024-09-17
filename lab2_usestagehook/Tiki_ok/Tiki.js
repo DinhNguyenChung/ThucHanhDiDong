@@ -1,4 +1,11 @@
-import { Image, SafeAreaView, TouchableOpacity, View } from "react-native";
+import {
+  FlatList,
+  Image,
+  Modal,
+  SafeAreaView,
+  TouchableOpacity,
+  View,
+} from "react-native";
 import React, { useEffect, useState } from "react";
 import { Text } from "react-native";
 import { styles } from "./styles";
@@ -9,7 +16,17 @@ const Tiki = () => {
   const [price, setPrice] = useState(141800);
   const [discountCode, setDiscountCode] = useState("");
   const [discount, setDiscount] = useState(0);
-  const [total, setTotal] = useState(141800);
+  const [total, setTotal] = useState(0);
+  const [isModalVisible, setModalVisible] = useState(false);
+
+  // Các mã giảm giá có sẵn
+  const availableDiscounts = ["DISCOUNT10", "DISCOUNT20", "DISCOUNT30"];
+  // Hàm chọn mã giảm giá và đóng Modal
+  const selectDiscount = (code) => {
+    setDiscountCode(code); // Cập nhật mã giảm giá
+    setModalVisible(false); // Đóng Modal ngay sau khi cập nhật
+    calculateTotal(); // Tính lại tổng tiền sau khi chọn mã giảm giá
+  };
   // Hàm xử lý tăng số lượng sản phẩm
   const increaseQuantity = () => {
     setQuantity((prevQuantity) => prevQuantity + 1);
@@ -30,6 +47,12 @@ const Tiki = () => {
     if (discountCode === "DISCOUNT10") {
       discountValue = 10; // Mã giảm 10%
     }
+    if (discountCode === "DISCOUNT20") {
+      discountValue = 20; // Mã giảm 20%
+    }
+    if (discountCode === "DISCOUNT30") {
+      discountValue = 30; // Mã giảm 30%
+    }
     setDiscount(discountValue);
     const newTotal = subTotal - (subTotal * discountValue) / 100;
     setTotal(newTotal); // Cập nhật giá trị thành tiền
@@ -37,7 +60,7 @@ const Tiki = () => {
   };
   useEffect(() => {
     calculateTotal();
-  }, [quantity]);
+  }, [quantity, discountCode]);
   // Hàm xử lý khi nhấn nút "TIẾN HÀNH ĐẶT HÀNG"
   const handleCheckout = () => {
     // Xử lý logic đặt hàng ở đây (gửi dữ liệu đến server, v.v.)
@@ -158,7 +181,8 @@ const Tiki = () => {
               backgroundColor: "#",
             }}
             value={discountCode}
-            onChangeText={setDiscountCode}
+            // onChangeText={setDiscountCode}
+            editable={false}
           />
         </View>
         <View style={{ width: "30%" }}>
@@ -167,7 +191,7 @@ const Tiki = () => {
             buttonStyle={{
               width: "80%",
             }}
-            onPress={calculateTotal}
+            onPress={() => setModalVisible(true)}
           />
         </View>
       </View>
@@ -253,6 +277,60 @@ const Tiki = () => {
           />
         </View>
       </View>
+      <Modal
+        visible={isModalVisible}
+        animationType="slide"
+        transparent={true}
+        onRequestClose={() => setModalVisible(false)} // Đóng modal khi nhấn ra ngoài
+      >
+        <View
+          style={{
+            flex: 1,
+            justifyContent: "center",
+            alignItems: "center",
+            backgroundColor: "rgba(0,0,0,0.5)", // Nền tối để rõ modal
+          }}
+        >
+          <View
+            style={{
+              backgroundColor: "white",
+              padding: 20,
+              borderRadius: 10,
+              width: "80%",
+            }}
+          >
+            <Text style={{ fontWeight: "bold", marginBottom: 10 }}>
+              Chọn mã giảm giá
+            </Text>
+
+            <FlatList
+              data={availableDiscounts}
+              renderItem={({ item }) => (
+                <TouchableOpacity
+                  onPress={() => selectDiscount(item)} // Chọn mã giảm giá và đóng modal
+                  style={{
+                    padding: 10,
+                    borderBottomWidth: 1,
+                    borderBottomColor: "#ccc",
+                  }}
+                >
+                  <Text>{item}</Text>
+                </TouchableOpacity>
+              )}
+              keyExtractor={(item) => item}
+            />
+
+            <Button
+              title="Đóng"
+              onPress={() => setModalVisible(false)}
+              buttonStyle={{
+                backgroundColor: "red",
+                marginTop: 10,
+              }}
+            />
+          </View>
+        </View>
+      </Modal>
     </SafeAreaView>
   );
 };

@@ -9,5 +9,5 @@ import Tiki from "./Tiki_ok/Tiki";
 import GeneratorPass from "./PasswordGenerate/passwordGenerator";
 
 export default function App() {
-  return <GeneratorPass />;
+  return <Tiki />;
 }
