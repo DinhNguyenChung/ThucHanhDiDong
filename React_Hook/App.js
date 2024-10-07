@@ -1,8 +1,9 @@
 import React from "react";
 
-import CounterApp from "./Hook/useState";
+import CounterAppState from "./Hook/useState";
+import CounterAppEffect from "./Hook/useEffect";
 
 const App = () => {
-  return <CounterApp />;
+  return <CounterAppEffect />;
 };
 export default App;
