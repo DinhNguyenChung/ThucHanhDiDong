@@ -1,18 +1,8 @@
 import React from "react";
-import {
-  SafeAreaView,
-  View,
-  FlatList,
-  StyleSheet,
-  Text,
-  StatusBar,
-  Image,
-} from "react-native";
-import { Button, Header, Icon } from "react-native-elements";
-import { SafeAreaProvider } from "react-native-safe-area-context";
-import ScreenChat from "./components/4a";
-
+import ScreenChat from "./fileScreen/ScreenChat";
+import ScreenDayCapUSB from "./fileScreen/ScreenDayCapUSB";
 const App = () => {
-  return <ScreenChat />;
+  // return <ScreenChat />;
+  return <ScreenDayCapUSB />;
 };
 export default App;
